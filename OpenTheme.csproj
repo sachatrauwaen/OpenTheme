@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\DNN910\packages\LibSassHost.Native.win-x64.1.3.3\build\LibSassHost.Native.win-x64.props" Condition="Exists('..\DNN910\packages\LibSassHost.Native.win-x64.1.3.3\build\LibSassHost.Native.win-x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2C33612-22BB-4E45-920C-9F8859840DBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenTheme</RootNamespace>
+    <AssemblyName>OpenTheme</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\DNN910\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedStringBuilder, Version=0.1.0.0, Culture=neutral, PublicKeyToken=e818a2fc08933ddb, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\AdvancedStringBuilder.0.1.0\lib\net45\AdvancedStringBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Dnn.PersonaBar.Library, Version=9.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Dnn.PersonaBar.Library.9.10.2\lib\net45\Dnn.PersonaBar.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke, Version=9.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\DotNetNuke.Core.9.10.2\lib\net45\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Abstractions, Version=9.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\DotNetNuke.Abstractions.9.10.2\lib\netstandard2.0\DotNetNuke.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.DependencyInjection, Version=9.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\DotNetNuke.DependencyInjection.9.10.2\lib\netstandard2.0\DotNetNuke.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Instrumentation, Version=9.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\DotNetNuke.Instrumentation.9.10.2\lib\net45\DotNetNuke.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.log4net, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\DotNetNuke.Instrumentation.9.10.2\lib\net45\DotNetNuke.log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Web, Version=9.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\DotNetNuke.Web.9.10.2\lib\net45\DotNetNuke.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Web.Razor">
+      <HintPath>..\DNN910\bin\DotNetNuke.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\DotNetNuke.Web.9.10.2\lib\net45\DotNetNuke.WebUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="LibSassHost, Version=1.3.3.0, Culture=neutral, PublicKeyToken=3e24e88796a38e46, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\LibSassHost.1.3.3\lib\net471\LibSassHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\DotNetNuke.Core.9.10.2\lib\net45\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.Extensions.DependencyInjection.2.1.1\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NUglify, Version=1.17.3.0, Culture=neutral, PublicKeyToken=15bc7810aec21b5e, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\NUglify.1.17.3\lib\net40\NUglify.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DNN910\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormDto.cs" />
+    <Compile Include="RazorTemplateProcessor.cs" />
+    <Compile Include="SaveSettingsResultDto.cs" />
+    <Compile Include="SettingsDto.cs" />
+    <Compile Include="ThemeSettingsController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BuildScripts\ModuleDeploy.targets" />
+    <None Include="BuildScripts\ModulePackage.targets" />
+    <None Include="BuildScripts\MSBuild.Community.Tasks.Targets" />
+    <None Include="BuildScripts\Solution\packages\MSBuildTasks.1.4.0.88\content\MSBuild.Community.Tasks.ReadMe.md" />
+    <None Include="BuildScripts\Solution\packages\MSBuildTasks.1.4.0.88\MSBuildTasks.1.4.0.88.nupkg" />
+    <None Include="BuildScripts\Solution\packages\MSBuildTasks.1.4.0.88\tools\Build.proj" />
+    <None Include="BuildScripts\Solution\packages\MSBuildTasks.1.4.0.88\tools\Install.ps1" />
+    <None Include="BuildScripts\Solution\packages\MSBuildTasks.1.4.0.88\tools\MSBuild.Community.Tasks.Targets" />
+    <None Include="BuildScripts\Solution\packages\MSBuildTasks.1.4.0.88\tools\MSBuild.Community.Tasks.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BuildScripts\Solution\packages\MSBuildTasks.1.4.0.88\tools\MSBuild.psm1" />
+    <None Include="BuildScripts\Solution\packages\repositories.config" />
+    <None Include="ClientSide\themesettings\package.json" />
+    <None Include="ClientSide\themesettings\README.md" />
+    <None Include="ClientSide\themesettings\src\App.vue" />
+    <None Include="ClientSide\themesettings\src\components\SettingsForm.vue" />
+    <None Include="ClientSide\themesettings\yarn.lock" />
+    <None Include="opentheme.dnn" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BuildScripts\Solution\packages\MSBuildTasks.1.4.0.88\tools\MSBuild.Community.Tasks.dll" />
+    <Content Include="BuildScripts\Solution\packages\MSBuildTasks.1.4.0.88\tools\MSBuild.Community.Tasks.xml" />
+    <Content Include="ClientSide\themesettings\.gitignore" />
+    <Content Include="ClientSide\themesettings\babel.config.js" />
+    <Content Include="ClientSide\themesettings\public\favicon.ico" />
+    <Content Include="ClientSide\themesettings\public\index.html" />
+    <Content Include="ClientSide\themesettings\src\assets\logo.png" />
+    <Content Include="ClientSide\themesettings\src\themeSettingsService.js" />
+    <Content Include="ClientSide\themesettings\src\main.js" />
+    <Content Include="ClientSide\themesettings\src\shared\connector.js" />
+    <Content Include="ClientSide\themesettings\vue.config.js" />
+    <Content Include="css\ThemeSettings.css" />
+    <Content Include="scripts\bundles\favicon.ico" />
+    <Content Include="scripts\bundles\index.html" />
+    <Content Include="scripts\bundles\js\app.js" />
+    <Content Include="scripts\ThemeSettings.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\DNN910\packages\LibSassHost.Native.win-x64.1.3.3\build\LibSassHost.Native.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\DNN910\packages\LibSassHost.Native.win-x64.1.3.3\build\LibSassHost.Native.win-x64.props'))" />
+  </Target>
+  <PropertyGroup>
+    <Extension>zip</Extension>
+    <DNNFileName>OpenTheme</DNNFileName>
+    <PackageName>OpenTheme</PackageName>
+    <MSBuildCommunityTasksPath>$(SolutionDir)\packages\MSBuildTasks.1.4.0.88\tools</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+  <Import Project="BuildScripts\ModulePackage.Targets" />
+  <Import Project="BuildScripts\ModuleDeploy.Targets" />
+  <Target Name="AfterBuild" DependsOnTargets="PackageModule;DeployModule">
+  </Target>
+</Project>
