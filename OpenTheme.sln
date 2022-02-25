@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTheme", "OpenTheme.csproj", "{C2C33612-22BB-4E45-920C-9F8859840DBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2C33612-22BB-4E45-920C-9F8859840DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C33612-22BB-4E45-920C-9F8859840DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C33612-22BB-4E45-920C-9F8859840DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C33612-22BB-4E45-920C-9F8859840DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B53DB34-05D8-4A4B-AAD8-A42ED0D2AC99}
+	EndGlobalSection
+EndGlobal

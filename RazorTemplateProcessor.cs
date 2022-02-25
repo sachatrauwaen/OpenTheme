@@ -34,6 +34,7 @@ namespace OpenTheme
 
             var writer = new StringWriter();
 
+
             //if (page is WebPage)
             //{
             //    page.ExecutePageHierarchy(pageContext, writer);
