@@ -74,9 +74,6 @@
     <Reference Include="DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\DNN910\packages\DotNetNuke.Web.9.10.2\lib\net45\DotNetNuke.WebUtility.dll</HintPath>
     </Reference>
-    <Reference Include="LibSassHost, Version=1.3.3.0, Culture=neutral, PublicKeyToken=3e24e88796a38e46, processorArchitecture=MSIL">
-      <HintPath>..\DNN910\packages\LibSassHost.1.3.3\lib\net471\LibSassHost.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\DNN910\packages\DotNetNuke.Core.9.10.2\lib\net45\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
