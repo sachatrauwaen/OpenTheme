@@ -60,10 +60,10 @@
         [HttpGet]
         public HttpResponseMessage GetSettings()
         {
-            string ascx = GetAscx();
+            string ascx = "";
             try
             {
-
+                ascx = GetAscx();
                 var ascxSchema = ascx.Replace(".ascx", ".ascx.schema.json");
                 var filenameSchema = Globals.ApplicationMapPath + ascxSchema;
                 var ascxOptions = ascx.Replace(".ascx", ".ascx.options.json");
@@ -96,13 +96,11 @@
                         Settings = ReadJson(filenameData)
                     }
                 };
-
-
                 return this.Request.CreateResponse(HttpStatusCode.OK, res);
             }
             catch (Exception ex)
             {
-                Logger.Error("ascx :" + ascx, ex);
+                Logger.Error("ascx :" + ascx + " : "+ ex.Message, ex);
                 return this.Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
