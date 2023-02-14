@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
 	<packages>
-		<package name="OpenTheme" type="PersonaBar" version="01.00.04">
+		<package name="OpenTheme" type="PersonaBar" version="01.00.05">
 			<friendlyName>OpenTheme</friendlyName>
 			<description>OpenTheme module by Satrabel.be</description>
 			<iconFile>~/DesktopModules/OpenTheme/Images/icon_extensions.png</iconFile>

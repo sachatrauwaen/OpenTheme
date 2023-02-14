@@ -163,6 +163,7 @@
     <None Include="ClientSide\themesettings\package.json" />
     <None Include="ClientSide\themesettings\README.md" />
     <None Include="ClientSide\themesettings\src\App.vue" />
+    <None Include="ClientSide\themesettings\src\components\BuilderForm.vue" />
     <None Include="ClientSide\themesettings\src\components\SettingsForm.vue" />
     <None Include="ClientSide\themesettings\yarn.lock" />
     <None Include="opentheme.dnn" />

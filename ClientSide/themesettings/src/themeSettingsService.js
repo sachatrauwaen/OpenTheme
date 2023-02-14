@@ -71,6 +71,14 @@ class ThemeService {
             Skin: { Settings: JSON.stringify(skin) }
         }, callback, errorCallback);
     }
+
+    saveBuilder(global, skin, callback, errorCallback) {
+        const sf = this.getServiceFramework("ThemeSettings");
+        sf.post("SaveBuilder", {
+            Global: { Schema: JSON.stringify(global.schema), Options: JSON.stringify(global.options) },
+            Skin: { Schema: JSON.stringify(skin.schema), Options: JSON.stringify(skin.options) }
+        }, callback, errorCallback);
+    }
 }
 
 const themeService = new ThemeService();

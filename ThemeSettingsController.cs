@@ -145,7 +145,6 @@
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public SaveSettingsResultDto SaveSettings(SettingsDto input)
         {
             try
@@ -167,14 +166,14 @@
                 dynamicObject.Global = dynamicGlobal;
                 dynamicObject.Skin = dynamicSkin;
 
-                if (File.Exists(filenameCssSchema))
+                if (File.Exists(filenameSchema))
                 {
                     var ascxData = ascx.Replace(".ascx", ".ascx.data.json");
                     var filenameData = Globals.ApplicationMapPath + ascxData;
                     File.WriteAllText(filenameData, input.Skin.Settings);
                     Generate(razor, ascx, dynamicObject);
                 }
-                if (File.Exists(filenameSchema))
+                if (File.Exists(filenameCssSchema))
                 {
                     //var css = Path.GetDirectoryName(ascx) + "/skin.css";
                     var cssData = css.Replace(".css", ".css.data.json");
@@ -186,6 +185,51 @@
                 }
                 HostController.Instance.IncrementCrmVersion(true);
                 DataCache.ClearPortalCache(PortalSettings.PortalId, true);
+            }
+            catch (Exception ex)
+            {
+                return new SaveSettingsResultDto
+                {
+                    Succes = false,
+                    Message = ex.Message
+                };
+            }
+            return new SaveSettingsResultDto
+            {
+                Succes = true,
+            };
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public SaveSettingsResultDto SaveBuilder(SettingsDto input)
+        {
+            try
+            {
+                var razor = new RazorTemplateProcessor();
+                string ascx = GetAscx();
+
+                var ascxSchema = ascx.Replace(".ascx", ".ascx.schema.json");
+                var filenameSchema = Globals.ApplicationMapPath + ascxSchema;
+                var ascxOptions = ascx.Replace(".ascx", ".ascx.options.json");
+                var filenameOptions = Globals.ApplicationMapPath + ascxOptions;
+
+                var css = Path.GetDirectoryName(ascx) + "/skin.css";
+                var cssSchema = css.Replace(".css", ".css.schema.json");
+                var filenameCssSchema = Globals.ApplicationMapPath + cssSchema;
+                var cssOptions = css.Replace(".css", ".css.options.json");
+                var filenameCssOptions = Globals.ApplicationMapPath + cssOptions;
+
+                if (File.Exists(filenameSchema))
+                {
+                    File.WriteAllText(filenameSchema, input.Skin.Schema);
+                    File.WriteAllText(filenameOptions, input.Skin.Options);
+                }
+                if (File.Exists(filenameCssSchema))
+                {
+                    File.WriteAllText(filenameCssSchema, input.Global.Schema);
+                    File.WriteAllText(filenameCssOptions, input.Global.Options);
+                }
             }
             catch (Exception ex)
             {
